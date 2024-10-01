@@ -1,0 +1,246 @@
+body {
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Libre Baskerville', serif;
+     display: flex;
+    flex-direction: column; /* Make the body a flex container */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+
+
+i {
+    color: white;
+    margin-left: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    background-color: #000680; 
+    color: #ffffff; 
+}
+
+header {
+  border-bottom: 2px solid #7bff00; 
+}
+
+footer {
+  border-top: 2px solid #7bff00;
+  justify-content: center;
+}
+  
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+  
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+header nav ul li {
+    margin-left: 20px;
+}
+  
+header nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+  
+header nav ul li a:hover {
+    color: #FF4500; 
+}
+
+.about-row, .my-projects-row, .my-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+    margin-bottom: 100px;
+}
+  
+.about-row h2, .my-projects-row h2, .my-contact-row h2 {
+    flex-shrink: 0;
+    width: 200px; 
+}
+  
+.about-content, .portfolio-content, .contact-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-left: 2px #008080 solid;
+    padding-left: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: auto; 
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    max-width: 800px;
+    line-height: 1.5;
+    border-bottom: solid #008080 2px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* This creates exactly 2 equal-width columns */
+    gap: 20px; /* Adjust the gap between the grid items */
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Max width ensures grid items don't get too wide */
+}
+
+.images-grid div {
+    text-align: center;
+}
+  
+.images-grid img {
+    width: 100%;  /* Use full width of grid item */
+    height: auto;
+    border-radius: 60px; /* Reduced border-radius for a cleaner look */
+}
+  
+.images-grid .title {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;  /* Ensure text stays centered */
+}
+
+.image-hover-text {
+  position: absolute; 
+  top: 25%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 10px;
+  border-radius: 5px; 
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .image-hover-text {
+  opacity: 1;
+}
+
+.images-grid img {
+    transition: transform 0.3s ease;
+}
+  
+.images-grid img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.my-contact-row i {
+    color: white;
+}
+
+.contact-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .contact-content li {
+    flex: 0 0 calc(50% - 10px); 
+    display: flex;
+    justify-content: center;
+  }
+
+.btn {
+    min-width: 250px;
+   
+}
+  
+.btn-primary:hover {
+    background-color: #004D4D; 
+}
+
+.btn-primary {
+  background-color: #21ac3f;
+  border: none;
+  color: #ffffff; 
+  position: relative;
+  overflow: hidden; 
+  transition: background-color 0.3s ease;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.btn-primary:hover {
+  background-color: #f32843; 
+}
+
+.btn-phone .default-text,
+.btn-email .default-text,
+.btn-phone .hover-text,
+.btn-email .hover-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.btn-phone .hover-text,
+.btn-email .hover-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.btn-phone:hover .default-text,
+.btn-email:hover .default-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn-phone:hover .hover-text,
+.btn-email:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
